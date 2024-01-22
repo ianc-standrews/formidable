@@ -465,7 +465,7 @@ class FrmProEntry {
 
 		$query['order'] = rtrim($query['order'], ', ');
 
-		$query = implode($query, ' ') . $args['limit'];
+		$query = implode(' ', $query) . $args['limit'];
 		$entry_ids = $wpdb->get_col( $query );
 
 		return $entry_ids;
